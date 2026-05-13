@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { GitBranch, LinkedinIcon, Mail } from 'lucide-react'
 
 const links = [
   { href: '#expertise', label: 'Expertise' },
@@ -25,8 +25,8 @@ export function Navigation() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a aria-label="GitHub" href="https://github.com/Monoru1" className="rounded-xl p-2 text-zinc-400 transition hover:bg-white/[0.04] hover:text-white"><Github className="h-4 w-4" /></a>
-          <a aria-label="LinkedIn" href="#contact" className="rounded-xl p-2 text-zinc-400 transition hover:bg-white/[0.04] hover:text-white"><Linkedin className="h-4 w-4" /></a>
+          <a aria-label="GitHub" href="https://github.com/Monoru1" className="rounded-xl p-2 text-zinc-400 transition hover:bg-white/[0.04] hover:text-white"><GitBranch className="h-4 w-4" /></a>
+          <a aria-label="LinkedIn" href="#contact" className="rounded-xl p-2 text-zinc-400 transition hover:bg-white/[0.04] hover:text-white"><LinkedinIcon className="h-4 w-4" /></a>
           <a aria-label="Email" href="mailto:contact@example.com" className="rounded-xl p-2 text-zinc-400 transition hover:bg-white/[0.04] hover:text-white"><Mail className="h-4 w-4" /></a>
         </div>
       </nav>
