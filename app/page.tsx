@@ -3,6 +3,7 @@ import { Navigation } from '@/components/navigation'
 import { SystemGrid } from '@/components/system-grid'
 import { WorkflowSection } from '@/components/workflow-section'
 import { ContactSection } from '@/components/contact-section'
+import { LiveSystemPanel } from '@/components/live-system-panel'
 
 const expertise = [
   {
@@ -124,6 +125,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <LiveSystemPanel />
 
       <section id="architecture" className="relative px-6 py-32">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
