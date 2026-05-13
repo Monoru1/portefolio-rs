@@ -3,85 +3,68 @@
 import { motion } from 'framer-motion'
 
 const systems = [
-  {
-    title: 'Automation Core',
-    status: 'Operational',
-  },
-  {
-    title: 'AI Runtime',
-    status: 'Learning',
-  },
-  {
-    title: 'Security Layer',
-    status: 'Protected',
-  },
-  {
-    title: 'Infrastructure Grid',
-    status: 'Stable',
-  },
+  { title: 'Automatisation', status: 'Workflows métier' },
+  { title: 'Interfaces Web', status: 'Sites & dashboards' },
+  { title: 'Backend', status: 'APIs & données' },
+  { title: 'Infrastructure', status: 'Déploiement & supervision' },
 ]
+
+const stack = ['Next.js', 'React', 'TypeScript', 'Python', 'Docker', 'PostgreSQL']
 
 export function LiveSystemPanel() {
   return (
-    <section className="relative px-6 py-32">
+    <section className="relative px-4 py-20 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-10 grid gap-5 lg:grid-cols-[1fr_0.8fr] lg:items-end">
           <div>
-            <span className="text-sm uppercase tracking-[0.3em] text-primary">
-              Live Infrastructure
+            <span className="text-xs uppercase tracking-[0.26em] text-primary sm:text-sm sm:tracking-[0.3em]">
+              Systems Overview
             </span>
 
-            <h2 className="mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight">
-              Une interface inspirée des systèmes d’ingénierie avancés.
+            <h2 className="mt-4 max-w-4xl text-4xl font-black leading-[0.98] tracking-tight sm:text-5xl md:text-6xl">
+              Des compétences organisées comme un vrai système produit.
             </h2>
           </div>
 
-          <p className="max-w-xl text-lg leading-relaxed text-zinc-400">
-            Une direction artistique pensée pour transmettre la maîtrise technique, l’automatisation et la puissance système.
+          <p className="max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+            Le but n’est pas d’afficher des pourcentages artificiels, mais de montrer comment les briques techniques se connectent pour créer une solution complète.
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
-          <div className="glass relative overflow-hidden rounded-[32px] p-8">
+        <div className="grid gap-5 lg:grid-cols-[1fr_0.8fr]">
+          <div className="glass relative overflow-hidden rounded-[28px] p-5 sm:p-7 md:rounded-[32px] md:p-8">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
 
             <div className="relative z-10">
-              <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
+              <div className="mb-6 flex flex-col gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.3em] text-zinc-500">
-                    System Overview
+                  <div className="text-xs uppercase tracking-[0.24em] text-zinc-500">
+                    Capability Map
                   </div>
-                  <div className="mt-2 text-2xl font-bold">
+                  <div className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
                     Engineering Matrix
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-emerald-300">
-                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-                  Active
+                <div className="w-fit rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs uppercase tracking-[0.18em] text-emerald-300">
+                  Disponible pour projets
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {systems.map((item, index) => (
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 18 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.08 }}
                     viewport={{ once: true }}
                     key={item.title}
-                    className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+                    className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
                   >
-                    <div>
-                      <div className="text-lg font-medium">
-                        {item.title}
-                      </div>
-                      <div className="mt-1 text-sm text-zinc-500">
-                        Runtime monitoring enabled
-                      </div>
+                    <div className="text-xl font-black tracking-tight">
+                      {item.title}
                     </div>
-
-                    <div className="rounded-full bg-white/[0.04] px-4 py-2 text-sm text-zinc-300">
+                    <div className="mt-2 text-sm leading-relaxed text-zinc-500">
                       {item.status}
                     </div>
                   </motion.div>
@@ -90,30 +73,24 @@ export function LiveSystemPanel() {
             </div>
           </div>
 
-          <div className="glass rounded-[32px] p-8">
-            <div className="mb-8 text-xs uppercase tracking-[0.3em] text-zinc-500">
-              Stack Runtime
+          <div className="glass rounded-[28px] p-5 sm:p-7 md:rounded-[32px] md:p-8">
+            <div className="mb-6 text-xs uppercase tracking-[0.24em] text-zinc-500">
+              Core Stack
             </div>
 
-            <div className="space-y-5">
-              {['Next.js', 'TypeScript', 'GSAP', 'Three.js', 'Automation', 'AI Systems'].map((item) => (
-                <div key={item}>
-                  <div className="mb-2 flex items-center justify-between text-sm text-zinc-400">
-                    <span>{item}</span>
-                    <span>99%</span>
-                  </div>
-
-                  <div className="h-2 overflow-hidden rounded-full bg-white/[0.04]">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: '99%' }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2 }}
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-cyan-400"
-                    />
-                  </div>
-                </div>
+            <div className="flex flex-wrap gap-3">
+              {stack.map((item) => (
+                <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-zinc-300">
+                  {item}
+                </span>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-3xl border border-white/10 bg-black/30 p-5">
+              <div className="text-sm uppercase tracking-[0.22em] text-primary">Approche</div>
+              <p className="mt-4 text-base leading-relaxed text-zinc-400">
+                Construire vite, proprement, avec une architecture compréhensible, maintenable et prête à être déployée.
+              </p>
             </div>
           </div>
         </div>
