@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Workflow, Cpu, Server, Radar } from 'lucide-react'
+import { Shield, Workflow, Cpu, Server, Radar } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
 import { SystemGrid } from '@/components/system-grid'
 import { WorkflowSection } from '@/components/workflow-section'
@@ -9,6 +9,9 @@ import { ProjectPreview } from '@/components/project-preview'
 import { EngineeringPhilosophy } from '@/components/engineering-philosophy'
 import { CommandTerminal } from '@/components/command-terminal'
 import { NetworkGrid } from '@/components/network-grid'
+import { MagneticButton } from '@/components/magnetic-button'
+import { StickyShowcase } from '@/components/sticky-showcase'
+import { PremiumFooter } from '@/components/premium-footer'
 
 const expertise = [
   {
@@ -67,14 +70,13 @@ export default function HomePage() {
           </p>
 
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="group flex items-center gap-2 rounded-2xl bg-white px-8 py-4 font-medium text-black transition-all duration-300 hover:scale-105">
+            <MagneticButton>
               Explorer le portfolio
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </MagneticButton>
 
-            <button className="glass rounded-2xl px-8 py-4 transition-all duration-300 hover:border-primary/40">
+            <MagneticButton variant="ghost">
               Réserver un appel
-            </button>
+            </MagneticButton>
           </div>
 
           <div className="mt-24 grid gap-4 md:grid-cols-4">
@@ -136,6 +138,7 @@ export default function HomePage() {
 
       <LiveSystemPanel />
       <CommandTerminal />
+      <StickyShowcase />
       <ProjectPreview />
       <EngineeringPhilosophy />
 
@@ -196,6 +199,7 @@ export default function HomePage() {
 
       <WorkflowSection />
       <ContactSection />
+      <PremiumFooter />
     </main>
   )
 }
