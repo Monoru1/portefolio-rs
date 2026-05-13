@@ -12,6 +12,9 @@ import { NetworkGrid } from '@/components/network-grid'
 import { MagneticButton } from '@/components/magnetic-button'
 import { StickyShowcase } from '@/components/sticky-showcase'
 import { PremiumFooter } from '@/components/premium-footer'
+import { TechMarquee } from '@/components/tech-marquee'
+import { DataFlow } from '@/components/data-flow'
+import { Spotlight } from '@/components/spotlight'
 
 const expertise = [
   {
@@ -46,6 +49,7 @@ const metrics = [
 export default function HomePage() {
   return (
     <main className="relative noise overflow-hidden bg-background text-foreground">
+      <Spotlight />
       <Navigation />
       <SystemGrid />
       <HeroOrb />
@@ -89,6 +93,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <TechMarquee />
       <NetworkGrid />
 
       <section className="relative px-6 py-32" id="expertise">
@@ -137,6 +142,7 @@ export default function HomePage() {
       </section>
 
       <LiveSystemPanel />
+      <DataFlow />
       <CommandTerminal />
       <StickyShowcase />
       <ProjectPreview />
