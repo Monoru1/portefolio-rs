@@ -7,6 +7,8 @@ import { LiveSystemPanel } from '@/components/live-system-panel'
 import { HeroOrb } from '@/components/hero-orb'
 import { ProjectPreview } from '@/components/project-preview'
 import { EngineeringPhilosophy } from '@/components/engineering-philosophy'
+import { CommandTerminal } from '@/components/command-terminal'
+import { NetworkGrid } from '@/components/network-grid'
 
 const expertise = [
   {
@@ -85,6 +87,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <NetworkGrid />
+
       <section className="relative px-6 py-32" id="expertise">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -131,6 +135,7 @@ export default function HomePage() {
       </section>
 
       <LiveSystemPanel />
+      <CommandTerminal />
       <ProjectPreview />
       <EngineeringPhilosophy />
 
