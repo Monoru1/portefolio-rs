@@ -17,6 +17,9 @@ import { DataFlow } from '@/components/data-flow'
 import { Spotlight } from '@/components/spotlight'
 import { ProductDashboard } from '@/components/product-dashboard'
 import { SplitHeading } from '@/components/split-heading'
+import { CaseStudySystem } from '@/components/case-study-system'
+import { MetricsStrip } from '@/components/metrics-strip'
+import { AmbientLines } from '@/components/ambient-lines'
 
 const expertise = [
   {
@@ -51,6 +54,7 @@ const metrics = [
 export default function HomePage() {
   return (
     <main className="relative noise overflow-hidden bg-background text-foreground">
+      <AmbientLines />
       <Spotlight />
       <Navigation />
       <SystemGrid />
@@ -93,6 +97,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <MetricsStrip />
       <TechMarquee />
       <NetworkGrid />
 
@@ -146,6 +151,7 @@ export default function HomePage() {
       <DataFlow />
       <CommandTerminal />
       <StickyShowcase />
+      <CaseStudySystem />
       <ProjectPreview />
       <EngineeringPhilosophy />
 
