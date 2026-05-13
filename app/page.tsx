@@ -20,6 +20,7 @@ import { SplitHeading } from '@/components/split-heading'
 import { CaseStudySystem } from '@/components/case-study-system'
 import { MetricsStrip } from '@/components/metrics-strip'
 import { AmbientLines } from '@/components/ambient-lines'
+import { BuildProcess } from '@/components/build-process'
 
 const expertise = [
   {
@@ -153,6 +154,7 @@ export default function HomePage() {
       <StickyShowcase />
       <CaseStudySystem />
       <ProjectPreview />
+      <BuildProcess />
       <EngineeringPhilosophy />
 
       <section id="architecture" className="relative px-6 py-32">
