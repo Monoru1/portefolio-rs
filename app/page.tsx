@@ -15,6 +15,8 @@ import { PremiumFooter } from '@/components/premium-footer'
 import { TechMarquee } from '@/components/tech-marquee'
 import { DataFlow } from '@/components/data-flow'
 import { Spotlight } from '@/components/spotlight'
+import { ProductDashboard } from '@/components/product-dashboard'
+import { SplitHeading } from '@/components/split-heading'
 
 const expertise = [
   {
@@ -64,9 +66,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="mx-auto max-w-6xl text-6xl font-black leading-none tracking-tight md:text-8xl xl:text-[9rem]">
-            Des systèmes intelligents.
-            <br />
-            Une ingénierie premium.
+            <SplitHeading title="Des systèmes intelligents. Une ingénierie premium." />
           </h1>
 
           <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl">
@@ -142,6 +142,7 @@ export default function HomePage() {
       </section>
 
       <LiveSystemPanel />
+      <ProductDashboard />
       <DataFlow />
       <CommandTerminal />
       <StickyShowcase />
