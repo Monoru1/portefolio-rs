@@ -21,6 +21,7 @@ import { CaseStudySystem } from '@/components/case-study-system'
 import { MetricsStrip } from '@/components/metrics-strip'
 import { AmbientLines } from '@/components/ambient-lines'
 import { BuildProcess } from '@/components/build-process'
+import { LanguageCloud } from '@/components/language-cloud'
 
 const expertise = [
   {
@@ -101,6 +102,7 @@ export default function HomePage() {
       <MetricsStrip />
       <TechMarquee />
       <NetworkGrid />
+      <LanguageCloud />
 
       <section className="relative px-6 py-32" id="expertise">
         <div className="mx-auto max-w-7xl">
