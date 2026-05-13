@@ -12,31 +12,41 @@ const events = [
 
 export function ProductDashboard() {
   return (
-    <section className="relative px-6 py-32">
+    <section className="relative px-4 py-20 sm:px-6 md:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
-          <span className="text-sm uppercase tracking-[0.3em] text-primary">Product Mockup</span>
-          <h2 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-tight tracking-tight">
+        <div className="mb-14 text-center">
+          <span className="text-xs uppercase tracking-[0.26em] text-primary sm:text-sm">
+            Product Mockup
+          </span>
+
+          <h2 className="mx-auto mt-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight sm:text-5xl md:text-6xl">
             Des interfaces produits qui vendent immédiatement la compétence technique.
           </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
+
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-zinc-400 sm:text-lg">
             Le portfolio doit donner envie aux clients de confier des outils, dashboards, automatisations et plateformes complètes.
           </p>
         </div>
 
-        <div className="glass overflow-hidden rounded-[40px] border border-white/10 shadow-2xl shadow-black/40">
-          <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-6 py-4">
+        <div className="glass overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/40 md:rounded-[40px]">
+          <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-4 py-4 sm:px-6">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-red-400/80" />
               <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
               <span className="h-3 w-3 rounded-full bg-emerald-400/80" />
             </div>
-            <span className="text-xs uppercase tracking-[0.3em] text-zinc-500">automation-os</span>
+
+            <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 sm:text-xs">
+              automation-os
+            </span>
           </div>
 
           <div className="grid gap-0 lg:grid-cols-[0.75fr_1.25fr]">
-            <div className="border-r border-white/10 p-8">
-              <div className="mb-8 text-xs uppercase tracking-[0.3em] text-zinc-500">Runtime Events</div>
+            <div className="border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:p-8">
+              <div className="mb-6 text-[10px] uppercase tracking-[0.25em] text-zinc-500 sm:text-xs">
+                Runtime Events
+              </div>
+
               <div className="space-y-4">
                 {events.map((event, index) => (
                   <motion.div
@@ -56,18 +66,21 @@ export function ProductDashboard() {
               </div>
             </div>
 
-            <div className="p-8">
-              <div className="grid gap-6 md:grid-cols-3">
+            <div className="p-5 sm:p-8">
+              <div className="grid gap-4 sm:grid-cols-3 sm:gap-6">
                 {['Tasks automated', 'Systems monitored', 'Threats blocked'].map((item, index) => (
-                  <div key={item} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                    <div className="text-4xl font-black">{index === 0 ? '1.2k' : index === 1 ? '48' : '327'}</div>
+                  <div key={item} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+                    <div className="text-3xl font-black sm:text-4xl">
+                      {index === 0 ? '1.2k' : index === 1 ? '48' : '327'}
+                    </div>
+
                     <div className="mt-2 text-sm text-zinc-500">{item}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 h-[320px] rounded-[32px] border border-white/10 bg-gradient-to-br from-primary/15 via-white/[0.03] to-cyan-400/10 p-6">
-                <div className="flex h-full items-end gap-3">
+              <div className="mt-8 h-[180px] rounded-[28px] border border-white/10 bg-gradient-to-br from-primary/15 via-white/[0.03] to-cyan-400/10 p-4 sm:h-[320px] sm:p-6">
+                <div className="flex h-full items-end gap-2 sm:gap-3">
                   {[40, 70, 55, 90, 64, 82, 95, 74, 88, 100].map((height, index) => (
                     <motion.div
                       key={index}
