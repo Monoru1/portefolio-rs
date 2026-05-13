@@ -42,3 +42,20 @@ body {
   opacity: 0.12;
   pointer-events: none;
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33%);
+  }
+}
+
+.fade-top {
+  mask-image: linear-gradient(to bottom, transparent, black 15%);
+}
+
+.fade-bottom {
+  mask-image: linear-gradient(to top, transparent, black 15%);
+}
