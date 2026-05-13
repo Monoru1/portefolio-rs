@@ -4,6 +4,9 @@ import { SystemGrid } from '@/components/system-grid'
 import { WorkflowSection } from '@/components/workflow-section'
 import { ContactSection } from '@/components/contact-section'
 import { LiveSystemPanel } from '@/components/live-system-panel'
+import { HeroOrb } from '@/components/hero-orb'
+import { ProjectPreview } from '@/components/project-preview'
+import { EngineeringPhilosophy } from '@/components/engineering-philosophy'
 
 const expertise = [
   {
@@ -40,6 +43,7 @@ export default function HomePage() {
     <main className="relative noise overflow-hidden bg-background text-foreground">
       <Navigation />
       <SystemGrid />
+      <HeroOrb />
 
       <section className="relative flex min-h-screen items-center justify-center px-6 pt-20">
         <div className="absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-primary/20 blur-[180px]" />
@@ -127,6 +131,8 @@ export default function HomePage() {
       </section>
 
       <LiveSystemPanel />
+      <ProjectPreview />
+      <EngineeringPhilosophy />
 
       <section id="architecture" className="relative px-6 py-32">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
