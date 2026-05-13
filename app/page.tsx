@@ -21,7 +21,8 @@ import { CaseStudySystem } from '@/components/case-study-system'
 import { MetricsStrip } from '@/components/metrics-strip'
 import { AmbientLines } from '@/components/ambient-lines'
 import { BuildProcess } from '@/components/build-process'
-import { LanguageCloud } from '@/components/language-cloud'
+import { ProfileSection } from '@/components/profile-section'
+import { RealTechStack } from '@/components/real-tech-stack'
 
 const expertise = [
   {
@@ -68,24 +69,24 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm backdrop-blur-xl">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-            Systems Engineer • Automation Architect • AI Builder
+            Ryad SAKA • Systems Engineer • AI Builder
           </div>
 
-          <h1 className="mx-auto max-w-6xl text-6xl font-black leading-none tracking-tight md:text-8xl xl:text-[9rem]">
+          <h1 className="mx-auto max-w-6xl text-6xl font-black leading-none tracking-tight md:text-8xl xl:text-[8rem]">
             <SplitHeading title="Des systèmes intelligents. Une ingénierie premium." />
           </h1>
 
           <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-            Développeur Fullstack spécialisé en automatisation, IA, infrastructures, cybersécurité et architectures digitales haute performance.
+            Développeur Fullstack spécialisé en automatisation, IA, infrastructures, cybersécurité et expériences digitales haute performance.
           </p>
 
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <MagneticButton>
-              Explorer le portfolio
+              Voir les projets
             </MagneticButton>
 
             <MagneticButton variant="ghost">
-              Réserver un appel
+              Me contacter
             </MagneticButton>
           </div>
 
@@ -99,10 +100,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProfileSection />
       <MetricsStrip />
       <TechMarquee />
       <NetworkGrid />
-      <LanguageCloud />
+      <RealTechStack />
 
       <section className="relative px-6 py-32" id="expertise">
         <div className="mx-auto max-w-7xl">
