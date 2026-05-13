@@ -23,6 +23,7 @@ import { AmbientLines } from '@/components/ambient-lines'
 import { BuildProcess } from '@/components/build-process'
 import { ProfileSection } from '@/components/profile-section'
 import { RealTechStack } from '@/components/real-tech-stack'
+import { AutoScroll } from '@/components/auto-scroll'
 
 const expertise = [
   {
@@ -57,30 +58,31 @@ const metrics = [
 export default function HomePage() {
   return (
     <main className="relative noise overflow-hidden bg-background text-foreground">
+      <AutoScroll />
       <AmbientLines />
       <Spotlight />
       <Navigation />
       <SystemGrid />
       <HeroOrb />
 
-      <section className="relative flex min-h-screen items-center justify-center px-6 pt-20">
+      <section className="relative flex min-h-screen items-center justify-center px-4 pt-24 sm:px-6">
         <div className="absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-primary/20 blur-[180px]" />
 
         <div className="relative z-10 mx-auto max-w-7xl text-center">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm backdrop-blur-xl">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs backdrop-blur-xl sm:text-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
             Ryad SAKA • Systems Engineer • AI Builder
           </div>
 
-          <h1 className="mx-auto max-w-6xl text-6xl font-black leading-none tracking-tight md:text-8xl xl:text-[8rem]">
+          <h1 className="mx-auto max-w-6xl text-4xl font-black leading-[0.88] tracking-tight sm:text-6xl md:text-8xl xl:text-[8rem]">
             <SplitHeading title="Des systèmes intelligents. Une ingénierie premium." />
           </h1>
 
-          <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl">
+          <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-zinc-400 sm:text-lg md:text-xl">
             Développeur Fullstack spécialisé en automatisation, IA, infrastructures, cybersécurité et expériences digitales haute performance.
           </p>
 
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <MagneticButton>
               Voir les projets
             </MagneticButton>
@@ -90,9 +92,9 @@ export default function HomePage() {
             </MagneticButton>
           </div>
 
-          <div className="mt-24 grid gap-4 md:grid-cols-4">
+          <div className="mt-14 grid gap-4 md:mt-24 md:grid-cols-4">
             {metrics.map((item) => (
-              <div key={item} className="glass rounded-2xl px-5 py-4 text-sm uppercase tracking-[0.2em] text-zinc-300">
+              <div key={item} className="glass rounded-2xl px-5 py-4 text-xs uppercase tracking-[0.2em] text-zinc-300 sm:text-sm">
                 {item}
               </div>
             ))}
@@ -106,7 +108,7 @@ export default function HomePage() {
       <NetworkGrid />
       <RealTechStack />
 
-      <section className="relative px-6 py-32" id="expertise">
+      <section className="relative px-4 py-20 sm:px-6 md:py-32" id="expertise">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -114,12 +116,12 @@ export default function HomePage() {
                 Expertise
               </span>
 
-              <h2 className="mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight">
+              <h2 className="mt-4 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl">
                 Ingénierie moderne orientée performance, automatisation et systèmes intelligents.
               </h2>
             </div>
 
-            <p className="max-w-xl text-lg leading-relaxed text-zinc-400">
+            <p className="max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
               Une approche combinant backend, IA, infrastructure, sécurité et expérience utilisateur premium.
             </p>
           </div>
@@ -131,7 +133,7 @@ export default function HomePage() {
               return (
                 <div
                   key={item.title}
-                  className="glass group rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:border-primary/30"
+                  className="glass group rounded-3xl p-6 transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 sm:p-8"
                 >
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-all group-hover:border-primary/40">
                     <Icon className="h-6 w-6 text-primary" />
@@ -141,7 +143,7 @@ export default function HomePage() {
                     {item.title}
                   </h3>
 
-                  <p className="text-lg leading-relaxed text-zinc-400">
+                  <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
                     {item.description}
                   </p>
                 </div>
@@ -161,9 +163,9 @@ export default function HomePage() {
       <BuildProcess />
       <EngineeringPhilosophy />
 
-      <section id="architecture" className="relative px-6 py-32">
+      <section id="architecture" className="relative px-4 py-20 sm:px-6 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="glass rounded-[32px] p-10 md:p-14">
+          <div className="glass rounded-[28px] p-6 sm:p-10 md:rounded-[32px] md:p-14">
             <div className="mb-8 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10">
                 <Radar className="h-5 w-5 text-primary" />
@@ -174,22 +176,22 @@ export default function HomePage() {
               </span>
             </div>
 
-            <h2 className="max-w-3xl text-5xl font-black leading-tight tracking-tight">
+            <h2 className="max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-5xl">
               Une architecture pensée pour des systèmes réels et scalables.
             </h2>
 
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
+            <p className="mt-8 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
               Le portfolio est conçu comme une plateforme technologique premium : animations GPU, architecture modulaire, composants réutilisables, optimisation SEO et expérience immersive.
             </p>
           </div>
 
-          <div className="glass rounded-[32px] p-10">
+          <div className="glass rounded-[28px] p-6 sm:p-10 md:rounded-[32px]">
             <div className="space-y-6">
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
                 <div className="mb-2 text-sm uppercase tracking-[0.2em] text-zinc-500">
                   Frontend Stack
                 </div>
-                <div className="text-xl font-semibold">
+                <div className="text-lg font-semibold sm:text-xl">
                   Next.js • TypeScript • Tailwind • Motion
                 </div>
               </div>
@@ -198,7 +200,7 @@ export default function HomePage() {
                 <div className="mb-2 text-sm uppercase tracking-[0.2em] text-zinc-500">
                   Engineering
                 </div>
-                <div className="text-xl font-semibold">
+                <div className="text-lg font-semibold sm:text-xl">
                   Automation • AI • Infrastructure • Security
                 </div>
               </div>
@@ -207,7 +209,7 @@ export default function HomePage() {
                 <div className="mb-2 text-sm uppercase tracking-[0.2em] text-zinc-500">
                   Experience
                 </div>
-                <div className="text-xl font-semibold">
+                <div className="text-lg font-semibold sm:text-xl">
                   Cinematic UI • Motion Design • Premium UX
                 </div>
               </div>
